@@ -56,7 +56,7 @@ class ReturnTypes extends Component {
 // index.html
 <body>
 <header>
-    <h1>Can't touch this</h1>
+    <h1>Cant touch this</h1>
     <span id="touchme"></span>
 </header>
 <div id="root"></div>
