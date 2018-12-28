@@ -60,7 +60,8 @@ class ReturnTypes extends Component {
     <span id="touchme"></span>
 </header>
 <div id="root"></div>
-
+```
+```javascript
 // App.js
 import { createPortal } from 'react-dom';
 
