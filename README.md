@@ -185,8 +185,8 @@ render() {
 - 이렇게 우리가 생성한 HOC에 의하여 컴포넌트를 보호하고, error 처리를 한다.
 
 ### this.setState(null)
-- setState는 컴포넌트를 업데이트한다.(그런데 업데이트를 콘트롤할 수 있다면?!)
-- 바로 setState null이 컴포넌트를 언제 업데이트할지 결정할 수 있는 기능을 제공한다.
+- setState는 컴포넌트를 업데이트한다.(그런데 업데이트를 컨트롤할 수 있다면?!)
+- 바로 setState null을 통해 컴포넌트를 언제 업데이트할지 컨트롤할 수 있다.
 ```javascript
 const MAX_PIZZAS = 20;
 
