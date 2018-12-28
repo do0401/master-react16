@@ -1,27 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+const MAX_PIZZAS = 20;
+
+const eatPizza = (state, props) => {
+  const { pizzas } = state;
+  if (pizzas < MAX_PIZZAS) {
+    return {
+      pizzas: pizzas + 1
+    };
+  } else {
+    return null;
+  }
+};
+
+class Controlled extends Component {
+  state = {
+    pizzas: 0
+  };
+  render() {
+    const { pizzas } = this.state;
+    return (
+      <button onClick={this._handleClick}>
+        {`I have eaten ${pizzas} ${pizzas ===1 ? "pizza" : "pizzas"}`}
+      </button>
+    );
+  }
+  _handleClick = () => {
+    this.setState(eatPizza);
+  };
+}
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    return <Controlled />;
   }
 }
 
